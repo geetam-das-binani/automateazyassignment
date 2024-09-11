@@ -2,7 +2,7 @@
 
 Dynamic Table with Pagination,Login Screen
 
-This project is a React-based application using Vite that features a dynamic table. The table fetches data from an API and includes pagination, sorting, and search functionality to provide an intuitive and efficient user experience.
+This project is a React-based application using Vite that features a dynamic table. The table fetches data from an API and includes pagination to provide an intuitive and efficient user experience.
 
 ## Features
 
