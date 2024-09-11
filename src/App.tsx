@@ -1,15 +1,20 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import LoginPage from "./pages/LoginPage"
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import Loader  from './loader/Loader'
+import { lazy, Suspense } from "react";
+const LoginPage = lazy(() => import("./pages/LoginPage"));
 
 const App = () => {
   return (
-    <BrowserRouter >
-      <Routes>
-        <Route path="/" element={<LoginPage/>}/>
-      </Routes>
+    <BrowserRouter>
+      <Suspense fallback={<Loader/>}>
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+        </Routes>
+      </Suspense>
+      <Toaster />
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;
