@@ -170,6 +170,8 @@ const AllLeadsTable = () => {
   ]);
   const [allPages, setAllPages] = useState(20);
   const totalPages=Math.ceil(allPages/ITEMS_PER_PAGE)
+  
+  
   const handleGetAllLeads = async () => {
     try {
       const res = await fetch("https://dev-cc.automateazy.com/api/v1/getLeads", {
