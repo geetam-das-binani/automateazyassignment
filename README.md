@@ -1,50 +1,53 @@
-# React + TypeScript + Vite
+# React + Vite +  Typescript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dynamic Table with Pagination,Login Screen
 
-Currently, two official plugins are available:
+This project is a React-based application using Vite that features a dynamic table. The table fetches data from an API and includes pagination, sorting, and search functionality to provide an intuitive and efficient user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+Dynamic Data Fetching: The table dynamically fetches data from a specified API, allowing real-time data display.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Pagination: The table supports pagination to efficiently manage and navigate large datasets.
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Prerequisites
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Ensure you have the following installed:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Node.js (v14 or higher)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+npm or yarn
+
+## Installation
+
+1.Clone the repository:
+git clone https://github.com/geetam-das-binani/automateazyassignment
+
+2.Navigate to the project director:
+
+cd your-repo-name
+
+3.Install dependencies:
+
+npm install
+
+### Running the Project
+
+To start the development server run :
+
+npm run dev
+
+## or
+
+yarn dev
+
+Open your browser and navigate to `http://localhost:5173` to see the application in action.
+
+### Building for Production
+
+To build the project for production run the following command:
+npm run build
+
+The output will be in the `dist/` directory.
