@@ -1,6 +1,6 @@
-
 import { IoLogoWhatsapp } from "react-icons/io";
-import { IoMdMail } from "react-icons/io";type Props = {
+import { IoMdMail } from "react-icons/io";
+type Props = {
   leadId: number;
   phone: string;
   email: string;
@@ -19,6 +19,14 @@ const TableData = ({
 }: Props) => {
   return (
     <tr className="text-gray-700 hover:bg-gray-600 hover:text-white">
+      <th>
+        
+        {" "}
+        <div className="flex ml-6">
+          <p className="mr-2">1</p>
+          <input type="checkbox" />
+        </div>
+      </th>
       <th scope="row" className="px-6 py-4 font-medium">
         {leadId}
         <dl className="space-y-1 lg:hidden ">
@@ -28,8 +36,16 @@ const TableData = ({
         </dl>
       </th>
       <td className="px-6 py-4">{name}</td>
-      <td className="hidden px-6 py-4 sm:table-cell"><span className="flex items-center gap-1">{phone} <IoLogoWhatsapp className="text-2xl text-green-500" /></span> </td>
-      <td className="hidden px-6 py-4 sm:table-cell"><span className="flex items-center gap-1">{email} <IoMdMail  className="text-2xl" /></span></td>
+      <td className="hidden px-6 py-4 sm:table-cell">
+        <span className="flex items-center gap-1">
+          {phone} <IoLogoWhatsapp className="text-2xl text-green-500" />
+        </span>{" "}
+      </td>
+      <td className="hidden px-6 py-4 sm:table-cell">
+        <span className="flex items-center gap-1">
+          {email} <IoMdMail className="text-2xl" />
+        </span>
+      </td>
       <td className="px-6 py-4 ">{leadPriority}</td>
       <td className="hidden px-6 py-4 lg:table-cell ">{leadOwner}</td>
     </tr>
