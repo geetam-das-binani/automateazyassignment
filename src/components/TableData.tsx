@@ -7,6 +7,7 @@ type Props = {
   leadOwner: string;
   name: string;
   leadPriority: string;
+  getSerialNumber: number
 };
 
 const TableData = ({
@@ -16,14 +17,14 @@ const TableData = ({
   leadOwner,
   name,
   leadPriority,
+  getSerialNumber
 }: Props) => {
   return (
     <tr className="text-gray-700 hover:bg-gray-600 hover:text-white">
       <th>
-        
         {" "}
         <div className="flex ml-6">
-          <p className="mr-2">1</p>
+          <p className="mr-2">{getSerialNumber}</p>
           <input type="checkbox" />
         </div>
       </th>

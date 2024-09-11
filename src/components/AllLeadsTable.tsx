@@ -195,6 +195,10 @@ const AllLeadsTable = () => {
       toast.error(error?.message ?? "Something went wrong");
     }
   };
+
+  const handleSerialNumber = (index: number) => {
+    return (page - 1) * ITEMS_PER_PAGE + index + 1;
+  };
   useEffect(() => {
     handleGetAllLeads();
   }, []);
@@ -203,7 +207,7 @@ const AllLeadsTable = () => {
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 shadow-lg rtl:text-right dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:text-gray-400">
-            <tr className="text-black" >
+            <tr className="text-black">
               <th>
                 {" "}
                 <div className="ml-8">
@@ -224,8 +228,12 @@ const AllLeadsTable = () => {
                 page * ITEMS_PER_PAGE - ITEMS_PER_PAGE,
                 page * ITEMS_PER_PAGE
               )
-              .map((lead) => (
-                <TableData key={lead.leadId} {...lead} />
+              .map((lead, index) => (
+                <TableData
+                  getSerialNumber={handleSerialNumber(index)}
+                  key={lead.leadId}
+                  {...lead}
+                />
               ))}
           </tbody>
         </table>
