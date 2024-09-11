@@ -1,5 +1,7 @@
 import * as z from "zod";
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).+$/;
+
+
 const loginSchema = z.object({
   email: z
     .string({ required_error: "Email is required" })
